@@ -18,6 +18,11 @@ const PlayerList = () => {
     const [players, setPlayers] = useState<PlayerStructure[]>([]);
 
     useEffect(() => {
+        if (gameIdNum != 0) {
+            api.get('game/' + gameIdNum + '/players').then(response => {
+                setPlayers(response.data);
+            })
+        }
         getPlayers().then(response => {
             setPlayers(response.data);
             console.log("Player list: ")
@@ -56,6 +61,7 @@ const PlayerList = () => {
 
 }
 
+// returns all players
 async function getPlayers () {
     return api.get('player');
 }
