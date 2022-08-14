@@ -30,7 +30,10 @@ const CardCount  = () => {
     const content = isLoading ? <div>Loading...</div> : <div><pre>{JSON.stringify(posts, undefined, 2)}</pre></div>
 
     return (
-        <div>{content}</div>
+        <div>
+            <h2>Card Count</h2>
+            {content}
+        </div>
     );
 }
 

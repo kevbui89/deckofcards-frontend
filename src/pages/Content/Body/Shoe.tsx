@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import api from '../../../services/api';
-import { GiCardExchange } from "react-icons/gi";
+import { GiCardExchange, GiCardPick } from "react-icons/gi";
 import './Body.css';
 
 
@@ -13,6 +13,7 @@ const Shoe = () => {
     
     return (
         <div className= "shoe">
+            <h2>Shoe</h2>
             <div className="shoe-cartcount">
 
             </div>
@@ -32,7 +33,7 @@ const Shoe = () => {
                     addDeck(gameIdNum);
                     Shoe();
                 }}>
-            Add Deck <GiCardExchange/>
+            Add Deck <GiCardPick/>
             </Link>
             </div>
         </div>
